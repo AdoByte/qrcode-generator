@@ -8,7 +8,7 @@ class MyQrCode:
 
     def create_qrcode(self, file_name, fg_color, bg_color):
 
-        user_input = "https://www.google.com"
+        user_input = input("Enter data: ")
 
         try:
             self.qr.add_data(user_input)
