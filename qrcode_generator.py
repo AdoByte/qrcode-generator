@@ -19,4 +19,11 @@ class MyQrCode:
             print(f"Error: {e}")
 
 
+def generate_qrcode():
+    my_qrcode = MyQrCode(10, 2)
+    my_qrcode.create_qrcode("test_qr.png", "blue", "white")
+
+
+if __name__ == '__main__':
+    generate_qrcode()
 
