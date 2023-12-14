@@ -13,7 +13,7 @@ class MyQrCode:
         try:
             self.qr.add_data(user_input)
             qr_image = self.qr.make_image(fill_color=fg_color, back_color=bg_color)
-            qr_image.save("test_qr.png")
+            qr_image.save(file_name)
 
         except Exception as e:
             print(f"Error: {e}")
@@ -21,7 +21,8 @@ class MyQrCode:
 
 def generate_qrcode():
     my_qrcode = MyQrCode(10, 2)
-    my_qrcode.create_qrcode("test_qr.png", "blue", "white")
+    file_name = input("Enter file name(without file extension): ")
+    my_qrcode.create_qrcode(f'{file_name}.png', "blue", "white")
 
 
 if __name__ == '__main__':
